@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 
+body {
+  background-color: #F5F5F5;
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,27 +40,30 @@
 
 /* Content กลางจอ */
 .content {
+  color: #ffffff;
   position: absolute;
-  top: 90%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #F5F5F5;
   text-align: center;
   max-width: auto;
 }
 
 .content h1 {
   font-family: "Crushed", sans-serif;
-  font-size: 50vw;
+  font-size: 50vw; line-height: 0.6;
   font-weight: 100;
+}
+
+.content p {
+  font-family: "Crushed", sans-serif;
+  font-size: 6.5vw;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
  
 body {
-  font-family: 'Raleway', sans-serif;
   min-height: 300vh;
-  background: white;
 }
  
 /* ────────────────────────────
@@ -348,41 +354,41 @@ body {
 }
 
 .merch {
-    height: 100vh;
     background-color: #F5F5F5;
 }
 
 .grid {
-    padding: 3vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-}
- 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
  
 .item {
   position: relative;
   overflow: hidden;
+  display: block;
   cursor: pointer;
   text-decoration: none;
-  display: block;
 }
  
 .item img {
   width: 100%;
-  aspect-ratio: 1 / 1.3;
+  aspect-ratio: 1.7 / 0.7;
   object-fit: cover;
   display: block;
   transition: filter 0.3s ease;
 }
+
+@media (max-width: 680px) {
+  .item img {
+    aspect-ratio: 3 / 4;
+  }
+}
  
 .item:hover img {
-  filter: blur(3px) brightness(0.6);
+  filter: brightness(50%);
 }
  
 .item-label {
@@ -400,15 +406,15 @@ body {
 }
  
 .item-label span {
-    font-family: "Crushed", sans-serif;
-  color: #000000;
-  font-size: 1rem;
-  font-weight: bold;
+  font-family: "Crushed", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 5vw; font-weight: bold;
+  color: #ffffff; 
   text-align: center;
-  padding: 0 0.75rem;
 }
 
 .parallax {
+  background-color: #F5F5F5;
   position: relative;
   width: 100%;
   height: 70vh;
