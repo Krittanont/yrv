@@ -13,21 +13,16 @@
 
     <div id="overlay" onclick="closeDrawer()"></div>
  
-<!-- ══════════════════════════════════
-     HEADER
-══════════════════════════════════ -->
 <header id="site-header">
  
-  <!-- Logo row: hidden at top, slides in after scroll (desktop) -->
   <div id="header-logo-row">
     <a href="index.html" class="header-logo">
       <span class="logo-text">YRV</span>
     </a>
   </div>
-  <!-- Nav row -->
+
   <div id="header-nav-row">
  
-    <!-- Desktop nav -->
     <nav id="desktop-nav">
       <a href="#">New Arrivals</a>
       <div class="sep"></div>
@@ -41,8 +36,7 @@
       <div class="sep"></div>
       <a href="#">explore</a>
     </nav>
- 
-    <!-- Mobile logo (always shown on small screens) -->
+
     <a href="#" id="mobile-logo" class="header-logo">
       <div class="logo-mark">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -66,85 +60,78 @@
  
 </header>
  
-<!-- ══════════════════════════════════
-     MOBILE DRAWER
-══════════════════════════════════ -->
-<div id="drawer" aria-hidden="true">
- 
-  <!-- Search -->
-  <div class="drawer-search">
-    <svg class="ico-search" width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <circle cx="5.8" cy="5.8" r="4.3" stroke="rgba(0,0,0)" stroke-width="1.2"/>
-      <line x1="9.2" y1="9.2" x2="12.5" y2="12.5" stroke="rgba(0,0,0)" stroke-width="1.2" stroke-linecap="round"/>
-    </svg>
-    <input type="search" placeholder="search" aria-label="ค้นหา">
+  <div id="drawer" aria-hidden="true">
+  
+    <div class="drawer-search">
+      <svg class="ico-search" width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <circle cx="5.8" cy="5.8" r="4.3" stroke="rgba(0,0,0)" stroke-width="1.2"/>
+        <line x1="9.2" y1="9.2" x2="12.5" y2="12.5" stroke="rgba(0,0,0)" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <input type="search" placeholder="search" aria-label="ค้นหา">
+    </div>
+  
+    <nav>
+      <a href="#">New Arrivals</a>
+      <a href="#">seasons</a>
+      <a href="#">Souvenirs</a>
+      <a href="#">Collections</a>
+      <a href="#">Fashion</a>
+      <a href="#">explore</a>
+    </nav>
+  
   </div>
  
-  <!-- Links -->
-  <nav>
-    <a href="#">New Arrivals</a>
-    <a href="#">seasons</a>
-    <a href="#">Souvenirs</a>
-    <a href="#">Collections</a>
-    <a href="#">Fashion</a>
-    <a href="#">explore</a>
-  </nav>
- 
-</div>
- 
-<script>
-  const header  = document.getElementById('site-header');
-  const toggle  = document.getElementById('menu-toggle');
-  const drawer  = document.getElementById('drawer');
-  const overlay = document.getElementById('overlay');
- 
-  /* scroll: transparent → frosted glass + logo reveal */
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 0);
-  }, { passive: true });
- 
-  function toggleDrawer() {
-    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
-  }
- 
-  function openDrawer() {
-    toggle.classList.add('open');
-    drawer.classList.add('open');
-    overlay.classList.add('visible');
-    drawer.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
- 
-  function closeDrawer() {
-    toggle.classList.remove('open');
-    drawer.classList.remove('open');
-    overlay.classList.remove('visible');
-    drawer.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
- 
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
-</script>
+  <script>
+    const header  = document.getElementById('site-header');
+    const toggle  = document.getElementById('menu-toggle');
+    const drawer  = document.getElementById('drawer');
+    const overlay = document.getElementById('overlay');
+  
+    /* scroll: transparent → frosted glass + logo reveal */
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 0);
+    }, { passive: true });
+  
+    function toggleDrawer() {
+      drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    }
+  
+    function openDrawer() {
+      toggle.classList.add('open');
+      drawer.classList.add('open');
+      overlay.classList.add('visible');
+      drawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  
+    function closeDrawer() {
+      toggle.classList.remove('open');
+      drawer.classList.remove('open');
+      overlay.classList.remove('visible');
+      drawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+  </script>
     
-<section class="video-section">
+  <section class="video-section">
 
-  <!-- Video Background -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="resources/dior.mp4" type="video/mp4">
-  </video>
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="resources/dior.mp4" type="video/mp4">
+    </video>
 
-  <!-- Overlay -->
-  <div class="overlay"></div>
+    <!-- Overlay -->
+    <div class="overlay"></div>
 
-  <!-- Content (กลางจอ) -->
-  <div class="content">
-    <h1>YRV</h1>
-    <p>THAMMASAT OFFICIAL STORE</p>
-  </div>
+    <!-- Content (กลางจอ) -->
+    <div class="content">
+      <h1>YRV</h1>
+      <p>THAMMASAT OFFICIAL STORE</p>
+    </div>
 
-</section>
-
-<section class="fade">
+  </section>
 
   <section class="merch">
     <div class="type fs-1">Collections</div>
@@ -184,10 +171,10 @@
       <span>YRV<br><p>Wear Your Spirit</p></span>
   </section>
   
-  <section class="sec3">
-    <div class="type fs-1">NEW ARRIVALS</div>
-  </section>
-  
+    <section class="sec3">
+      <div class="type fs-1">NEW ARRIVALS</div>
+    </section>
+
   <script>
     const img = document.querySelector('.parallax-img');
   
@@ -198,7 +185,92 @@
   
     window.addEventListener('scroll', onScroll, { passive: true });
   </script>
-</section>
+
+  <section>
+
+    <div class="carousel-wrap">
+ 
+  <button class="btn btn-prev" onclick="scroll(-1)">&#8249;</button>
+ 
+  <div class="carousel" id="carousel">
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 1">
+      <div class="card-info">
+        <span class="card-name">สินค้า 1</span>
+        <span class="card-price">฿ 590</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 2">
+      <div class="card-info">
+        <span class="card-name">สินค้า 2</span>
+        <span class="card-price">฿ 690</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 3">
+      <div class="card-info">
+        <span class="card-name">สินค้า 3</span>
+        <span class="card-price">฿ 790</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 4">
+      <div class="card-info">
+        <span class="card-name">สินค้า 4</span>
+        <span class="card-price">฿ 890</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 5">
+      <div class="card-info">
+        <span class="card-name">สินค้า 5</span>
+        <span class="card-price">฿ 990</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 6">
+      <div class="card-info">
+        <span class="card-name">สินค้า 6</span>
+        <span class="card-price">฿ 1,090</span>
+      </div>
+    </a>
+ 
+  </div>
+ 
+  <button class="btn btn-next" onclick="scroll(1)">&#8250;</button>
+ 
+</div>
+ 
+<script>
+  const carousel = document.getElementById('carousel');
+  const step = 220;
+ 
+  function scroll(dir) {
+    carousel.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+</script>
+
+  </section>
+
+  <script>
+        const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.20 });
+
+    document.querySelectorAll('.merch, .merch .type, .merch .grid, .parallax-text, .sec3')
+      .forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

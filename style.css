@@ -467,17 +467,94 @@ body {
 .sec3 {
   padding-top: 10vw ;
   width: 100%;
-  min-height: 100vh;
   background: #F5F5F5;
 }
 
- .fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+.merch, .merch .type, .merch .grid, .sec3 .carousel-wrap {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
 
-  .fade.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.carousel-wrap {
+  position: relative;
+  width: 100%;
+}
+ 
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0.5rem 0.25rem;
+}
+ 
+.carousel::-webkit-scrollbar { display: none; }
+ 
+.card {
+  flex: 0 0 200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+ 
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1.4;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s;
+}
+ 
+.card:hover img { opacity: 0.6; }
+ 
+.card-info {
+  padding: 0.65rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+ 
+.card-name {
+  font-size: 0.85rem;
+  color: #222;
+}
+ 
+.card-price {
+  font-size: 0.85rem;
+  color: #555;
+}
+ 
+/* buttons */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #333;
+  z-index: 1;
+  transition: background 0.2s;
+}
+ 
+.btn:hover { background: #eee; }
+ 
+.btn-prev { left: -18px; }
+.btn-next { right: -18px; }
