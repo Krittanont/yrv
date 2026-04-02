@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -19,7 +20,7 @@
  
   <!-- Logo row: hidden at top, slides in after scroll (desktop) -->
   <div id="header-logo-row">
-    <a href="#" class="header-logo">
+    <a href="index.html" class="header-logo">
       <span class="logo-text">YRV</span>
     </a>
   </div>
@@ -28,7 +29,7 @@
  
     <!-- Desktop nav -->
     <nav id="desktop-nav">
-      <a href="#">New Products</a>
+      <a href="#">New Arrivals</a>
       <div class="sep"></div>
       <a href="#">seasons</a>
       <div class="sep"></div>
@@ -73,20 +74,20 @@
   <!-- Search -->
   <div class="drawer-search">
     <svg class="ico-search" width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <circle cx="5.8" cy="5.8" r="4.3" stroke="rgba(178,207,207,.9)" stroke-width="1.2"/>
-      <line x1="9.2" y1="9.2" x2="12.5" y2="12.5" stroke="rgba(178,207,207,.9)" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="5.8" cy="5.8" r="4.3" stroke="rgba(0,0,0)" stroke-width="1.2"/>
+      <line x1="9.2" y1="9.2" x2="12.5" y2="12.5" stroke="rgba(0,0,0)" stroke-width="1.2" stroke-linecap="round"/>
     </svg>
-    <input type="search" placeholder="ค้นหา…" aria-label="ค้นหา">
+    <input type="search" placeholder="search" aria-label="ค้นหา">
   </div>
  
   <!-- Links -->
   <nav>
-    <a href="#">หน้าแรก</a>
-    <a href="#">เกี่ยวกับเรา</a>
-    <a href="#">หลักสูตร</a>
-    <a href="#">วิจัย</a>
-    <a href="#">ข่าวสาร</a>
-    <a href="#">ติดต่อ</a>
+    <a href="#">New Arrivals</a>
+    <a href="#">seasons</a>
+    <a href="#">Souvenirs</a>
+    <a href="#">Collections</a>
+    <a href="#">Fashion</a>
+    <a href="#">explore</a>
   </nav>
  
 </div>
@@ -99,7 +100,7 @@
  
   /* scroll: transparent → frosted glass + logo reveal */
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 800);
+    header.classList.toggle('scrolled', window.scrollY > 0);
   }, { passive: true });
  
   function toggleDrawer() {
@@ -143,54 +144,61 @@
 
 </section>
 
-<section class="merch">
-    <div class="grid">
- 
-  <a class="item" href="#">
-    <img src="resources/12.jpg" alt="สินค้า 1">
-    <div class="item-label"><span>74th</span></div>
-  </a>
- 
-  <a class="item" href="#">
-    <img src="resources/tu.jpg" alt="สินค้า 2">
-    <div class="item-label"><span>75th</span></div>
-  </a>
- 
-  <a class="item" href="#">
-    <img src="resources/75.jpg" alt="สินค้า 3">
-    <div class="item-label"><span>76th</span></div>
-  </a>
- 
-  <a class="item" href="#">
-    <img src="resources/se.jpg" alt="สินค้า 4">
-    <div class="item-label"><span>spacial edition</span></div>
-  </a>
- 
-</div>
-</section>
+<section class="fade">
 
-<section class="parallax">
-  <img
-    class="parallax-img"
-    src="resources/tu2.jpg"
-    alt="parallax image"
-  >
+  <section class="merch">
+    <div class="type fs-1">Collections</div>
+  
+      <div class="grid">
+  
+    <a class="item" href="#">
+      <img src="resources/73.jpeg" alt="สินค้า 1">
+      <div class="item-label display-3"><span>74th</span></div>
+    </a>
+  
+    <a class="item" href="#">
+      <img src="resources/74.2.jpg" alt="สินค้า 2">
+      <div class="item-label display-3"><span>75th</span></div>
+    </a>
+  
+    <a class="item" href="#">
+      <img src="resources/se.jpeg" alt="สินค้า 3">
+      <div class="item-label display-3"><span>76th</span></div>
+    </a>
+  
+    <a class="item" href="#">
+      <img src="resources/tu.jpg" alt="สินค้า 4">
+      <div class="item-label display-3"><span>spacial edition</span></div>
+    </a>
+  
+  </div>
+  </section>
+  
+  <section class="parallax">
+    <img
+      class="parallax-img"
+      src="resources/pro.jpg"
+      alt="parallax image"
+    >
+    <div class="parallax-text display-1">
+      <span>YRV<br><p>Wear Your Spirit</p></span>
+  </section>
+  
+  <section class="sec3">
+    <div class="type fs-1">NEW ARRIVALS</div>
+  </section>
+  
+  <script>
+    const img = document.querySelector('.parallax-img');
+  
+    function onScroll() {
+      const scrollY = window.scrollY;
+      img.style.transform = `translateY(${scrollY * 0.4}px)`;
+    }
+  
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
 </section>
- 
-<section class="next-section">
-  <p>next section</p>
-</section>
- 
-<script>
-  const img = document.querySelector('.parallax-img');
- 
-  function onScroll() {
-    const scrollY = window.scrollY;
-    img.style.transform = `translateY(${scrollY * 0.4}px)`;
-  }
- 
-  window.addEventListener('scroll', onScroll, { passive: true });
-</script>
 
 </body>
 </html>

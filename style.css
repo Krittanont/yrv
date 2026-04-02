@@ -57,7 +57,7 @@ body {
 
 .content p {
   font-family: "Crushed", sans-serif;
-  font-size: 6.5vw;
+  font-size: 5vw;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -193,18 +193,18 @@ body {
 .bar {
   display: block;
   height: 1.5px;
-  background: rgba(178, 207, 207, 0.85);
+  background: rgba(0, 0, 0);
   border-radius: 2px;
   transition: width 0.3s, transform 0.35s, opacity 0.25s;
   transform-origin: right center;
 }
-.b1 { width: 22px; }
+.b1 { width: 20px; }
 .b2 { width: 15px; }
-.b3 { width: 22px; }
+.b3 { width: 20px; }
  
-#menu-toggle.open .b1 { transform: translateY(6.5px) rotate(-45deg); width: 22px; }
+#menu-toggle.open .b1 { transform: translateY(6.5px) rotate(-45deg); width: 15px; }
 #menu-toggle.open .b2 { opacity: 0; width: 0; }
-#menu-toggle.open .b3 { transform: translateY(-6.5px) rotate(45deg); width: 22px; }
+#menu-toggle.open .b3 { transform: translateY(-6.5px) rotate(45deg); width: 15px; }
  
 /* ────────────────────────────
    OVERLAY
@@ -212,7 +212,9 @@ body {
 #overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.48);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 998;
   opacity: 0;
   pointer-events: none;
@@ -230,10 +232,10 @@ body {
   top: 0; right: 0;
   width: min(300px, 92vw);
   height: 100dvh;
-  background: rgba(10, 22, 22, 0.97);
+  background: rgba(255, 255, 255);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border-left: 1px solid rgba(178, 207, 207, 0.09);
+  border-left: 1px solid rgba(0, 0, 0, 0.09);
   z-index: 999;
   padding: 4.5rem 1.75rem 2rem;
   transform: translateX(100%);
@@ -255,11 +257,11 @@ body {
  
 .drawer-search input {
   width: 100%;
-  background: rgba(178, 207, 207, 0.05);
-  border: 1px solid rgba(178, 207, 207, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.18);
   border-radius: 8px;
   padding: 0.6rem 1rem 0.6rem 2.4rem;
-  color: rgba(178, 207, 207, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 0.84rem;
@@ -267,9 +269,9 @@ body {
   outline: none;
   transition: border-color 0.25s, background 0.25s;
 }
-.drawer-search input::placeholder { color: rgba(178, 207, 207, 0.3); }
+.drawer-search input::placeholder { color: rgba(0, 0, 0, 0.3); font-family: "Crushed", sans-serif;}
 .drawer-search input:focus {
-  border-color: rgba(178, 207, 207, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
   background: rgba(178, 207, 207, 0.09);
 }
  
@@ -289,14 +291,14 @@ body {
 }
  
 #drawer nav a {
-  font-weight: 300;
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
+  font-family: "Crushed", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(178, 207, 207, 0.58);
+  color: rgba(0, 0, 0);
   text-decoration: none;
   padding: 0.82rem 0.4rem;
-  border-bottom: 1px solid rgba(178, 207, 207, 0.07);
+  border-bottom: 1px solid rgba(58, 58, 58, 0.07);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -306,14 +308,13 @@ body {
   content: '';
   width: 5px;
   height: 5px;
-  border-right: 1px solid rgba(178, 207, 207, 0.3);
-  border-top: 1px solid rgba(178, 207, 207, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   transform: rotate(45deg);
   flex-shrink: 0;
 }
 #drawer nav a:hover {
-  color: rgba(178, 207, 207, 1);
-  padding-left: 0.65rem;
+  color: rgb(121, 121, 121);
 }
  
 /* ────────────────────────────
@@ -354,11 +355,20 @@ body {
 }
 
 .merch {
-    background-color: #F5F5F5;
+    background-color: #F5F5F5; padding-top: 13vw; padding-bottom: 5vw;
+}
+
+.type { font-weight: bold;letter-spacing: 0.05em;
+  font-family: "Crushed", sans-serif;
+  border-bottom: 1px solid #000000;
+  display: block;
+  width: fit-content;
+  line-height: 1.2;
+  margin: 0 auto;
 }
 
 .grid {
-  padding-top: 5vh;
+  padding-top: 4vw;
   padding-bottom: 5vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -366,7 +376,7 @@ body {
 }
  
 .item {
-  position: relative;
+  position: relative; 
   overflow: hidden;
   display: block;
   cursor: pointer;
@@ -374,11 +384,12 @@ body {
 }
  
 .item img {
+  filter: brightness(50%);
   width: 100%;
   aspect-ratio: 1.7 / 0.7;
   object-fit: cover;
   display: block;
-  transition: filter 0.3s ease;
+  transition:all 0.5s ease;
 }
 
 @media (max-width: 680px) {
@@ -388,7 +399,11 @@ body {
 }
  
 .item:hover img {
-  filter: brightness(50%);
+  filter: brightness(100%);
+}
+
+.item:hover .item-label span{
+ padding-bottom: 0.7rem;
 }
  
 .item-label {
@@ -397,20 +412,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
   transition: opacity 0.3s ease;
-}
- 
-.item:hover .item-label {
-  opacity: 1;
 }
  
 .item-label span {
   font-family: "Crushed", sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 5vw; font-weight: bold;
+  letter-spacing: 0.05em;
   color: #ffffff; 
   text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  transition:all 0.2s ease;
 }
 
 .parallax {
@@ -422,6 +433,7 @@ body {
 }
  
 .parallax-img {
+  filter: brightness(50%);
   position: absolute;
   top: -130%;
   left: 0;
@@ -431,18 +443,41 @@ body {
   object-position: center;
   will-change: transform;
 }
+
+.parallax-text {
+  letter-spacing: 0.05em;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  top: 50%; left: 10%;
+  color: #fff;
+}
+
+.parallax-text span {
+  font-family: "Crushed", sans-serif; font-size: 20vh; line-height: 0.9;
+  
+}
+
+.parallax-text span p {
+  font-family: "Crushed", sans-serif; font-size: 5vh;
+  
+}
  
 /* ── NEXT SECTION ── */
-.next-section {
+.sec3 {
+  padding-top: 10vw ;
   width: 100%;
   min-height: 100vh;
   background: #F5F5F5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
- 
-.next-section p {
-  font-size: 1rem;
-  color: #666;
-}
+
+ .fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
