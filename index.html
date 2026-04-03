@@ -160,6 +160,75 @@
   
   </div>
   </section>
+
+  <section class="sec3">
+      <div class="type fs-1">NEW ARRIVALS</div>
+  </section>
+
+      <section class="carousel-wrap">
+ 
+  <div class="carousel" id="carousel">
+ 
+    <a class="card" href="#">
+      <img src="resources/tu75.png" alt="สินค้า 1">
+      <div class="card-info">
+        <span class="card-name fs-5">TU Signature Jersey</span>
+        <span class="card-price fs-6">590 thb</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="resources/scalf.png" alt="สินค้า 2">
+      <div class="card-info">
+        <span class="card-name fs-5">Red-Dome Iconic Scarf</span>
+        <span class="card-price fs-6">690 thb</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="resources/tba.png" alt="สินค้า 3">
+      <div class="card-info">
+        <span class="card-name fs-5">TU Babe Jersey</span>
+        <span class="card-price fs-6">449 thb</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 4">
+      <div class="card-info">
+        <span class="card-name fs-5">สินค้า 4</span>
+        <span class="card-price fs-6">399 thb</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 5">
+      <div class="card-info">
+        <span class="card-name fs-5">สินค้า 5</span>
+        <span class="card-price fs-6">990 thb</span>
+      </div>
+    </a>
+ 
+    <a class="card" href="#">
+      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 6">
+      <div class="card-info">
+        <span class="card-name fs-5">สินค้า 6</span>
+        <span class="card-price fs-6">1,090 thb</span>
+      </div>
+    </a>
+ 
+  </div>
+ 
+</section>
+ 
+<script>
+  const carousel = document.getElementById('carousel');
+  const step = 220;
+ 
+  function scroll(dir) {
+    carousel.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+</script>
   
   <section class="parallax">
     <img
@@ -170,10 +239,6 @@
     <div class="parallax-text display-1">
       <span>YRV<br><p>Wear Your Spirit</p></span>
   </section>
-  
-    <section class="sec3">
-      <div class="type fs-1">NEW ARRIVALS</div>
-    </section>
 
   <script>
     const img = document.querySelector('.parallax-img');
@@ -185,79 +250,6 @@
   
     window.addEventListener('scroll', onScroll, { passive: true });
   </script>
-
-  <section>
-
-    <div class="carousel-wrap">
- 
-  <button class="btn btn-prev" onclick="scroll(-1)">&#8249;</button>
- 
-  <div class="carousel" id="carousel">
- 
-    <a class="card" href="#">
-      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 1">
-      <div class="card-info">
-        <span class="card-name">สินค้า 1</span>
-        <span class="card-price">฿ 590</span>
-      </div>
-    </a>
- 
-    <a class="card" href="#">
-      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 2">
-      <div class="card-info">
-        <span class="card-name">สินค้า 2</span>
-        <span class="card-price">฿ 690</span>
-      </div>
-    </a>
- 
-    <a class="card" href="#">
-      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 3">
-      <div class="card-info">
-        <span class="card-name">สินค้า 3</span>
-        <span class="card-price">฿ 790</span>
-      </div>
-    </a>
- 
-    <a class="card" href="#">
-      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 4">
-      <div class="card-info">
-        <span class="card-name">สินค้า 4</span>
-        <span class="card-price">฿ 890</span>
-      </div>
-    </a>
- 
-    <a class="card" href="#">
-      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 5">
-      <div class="card-info">
-        <span class="card-name">สินค้า 5</span>
-        <span class="card-price">฿ 990</span>
-      </div>
-    </a>
- 
-    <a class="card" href="#">
-      <img src="https://placehold.co/200x200/cccccc/888?text=+" alt="สินค้า 6">
-      <div class="card-info">
-        <span class="card-name">สินค้า 6</span>
-        <span class="card-price">฿ 1,090</span>
-      </div>
-    </a>
- 
-  </div>
- 
-  <button class="btn btn-next" onclick="scroll(1)">&#8250;</button>
- 
-</div>
- 
-<script>
-  const carousel = document.getElementById('carousel');
-  const step = 220;
- 
-  function scroll(dir) {
-    carousel.scrollBy({ left: dir * step, behavior: 'smooth' });
-  }
-</script>
-
-  </section>
 
   <script>
         const observer = new IntersectionObserver((entries) => {
