@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   background-color: #f1f1f1;
@@ -41,7 +42,7 @@ body {
 
 /* Content กลางจอ */
 .content {
-  color: #ffffff;
+  color: #000000;
   position: absolute;
   top: 56%;
   left: 50%;
@@ -51,13 +52,13 @@ body {
 }
 
 .content h1 {
-  font-family: "Crushed", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
   font-size: 50vw; line-height: 0.6;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .content p {
-  font-family: "Crushed", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
   font-size: 5vw;
 }
 
@@ -71,6 +72,7 @@ body {
    HEADER SHELL
 ──────────────────────────── */
 #site-header {
+  height: 7rem;
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
@@ -117,8 +119,8 @@ body {
 }
  
 .logo-text {
-    font-family: "Crushed", sans-serif;
-  font-weight: 200;
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 500;
   font-size: 4rem;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -147,9 +149,8 @@ body {
 }
  
 #desktop-nav a {
-    font-family: "Crushed", sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  font-family: "Alumni Sans", sans-serif; font-weight: 600;
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -270,7 +271,7 @@ body {
   outline: none;
   transition: border-color 0.25s, background 0.25s;
 }
-.drawer-search input::placeholder { color: rgba(0, 0, 0, 0.3); font-family: "Crushed", sans-serif;}
+.drawer-search input::placeholder { color: rgba(0, 0, 0, 0.5); font-family: "Alumni Sans", sans-serif;}
 .drawer-search input:focus {
   border-color: rgba(255, 255, 255, 0.4);
   background: rgba(178, 207, 207, 0.09);
@@ -292,7 +293,7 @@ body {
 }
  
 #drawer nav a {
-  font-family: "Crushed", sans-serif;
+  font-family: "Alumni Sans", sans-serif; font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -323,6 +324,7 @@ body {
 ──────────────────────────── */
 @media (max-width: 768px) {
   #site-header {
+    height: 3rem;
     position: fixed;
     top: 0; left: 0; right: 0;
   }
@@ -359,8 +361,8 @@ body {
     background-color: #f1f1f1; padding-top: 8vw;
 }
 
-.type { font-weight: bold;letter-spacing: 0.05em;
-  font-family: "Crushed", sans-serif;
+.type { font-weight: 600;
+  font-family: "Alumni Sans", sans-serif;
   border-bottom: 1px solid #000000;
   display: block;
   width: fit-content;
@@ -417,7 +419,7 @@ body {
 }
  
 .item-label span {
-  font-family: "Crushed", sans-serif;
+  font-family: "Alumni Sans", sans-serif; font-weight: 500;
   letter-spacing: 0.05em;
   color: #ffffff; 
   text-align: center;
@@ -446,7 +448,6 @@ body {
 }
 
 .parallax-text {
-  letter-spacing: 0.05em;
   position: absolute;
   inset: 0;
   display: flex;
@@ -455,12 +456,12 @@ body {
 }
 
 .parallax-text span {
-  font-family: "Crushed", sans-serif; font-size: 20vh; line-height: 0.9;
+  font-family: "Alumni Sans", sans-serif; font-weight: 600; font-size: 20vh; line-height: 0.9;
   
 }
 
 .parallax-text span p {
-  font-family: "Crushed", sans-serif; font-size: 5vh;
+  font-family: "Alumni Sans", sans-serif; font-weight: 500; font-size: 5vh;
   
 }
  
@@ -502,7 +503,7 @@ body {
 .card {
   border: none; border-radius: 0%;
   flex: 0 0 20rem;
-  background: #ffffff;
+  background: none;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -535,35 +536,13 @@ body {
 }
  
 .card-name {
-  font-family: "Oswald", sans-serif;
+  font-family: "Alumni Sans", sans-serif; font-weight: 600;
   color: #222;
 }
  
 .card-price {
-  font-family: "Crushed", sans-serif;
-  color: #555;
+  font-family: "Alumni Sans", sans-serif;font-weight: 700;
+  color: #7c7c7c; opacity: 0; transition:all 0.4s;
 }
- 
-/* buttons */
-.btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  background: #fff;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: #333;
-  z-index: 1;
-  transition: background 0.2s;
-}
- 
-.btn:hover { background: #eee; }
- 
-.btn-prev { left: -18px; }
-.btn-next { right: -18px; }
+
+.card:hover .card-price { opacity: 1; }
